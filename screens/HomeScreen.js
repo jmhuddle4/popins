@@ -33,51 +33,28 @@ export default class HomeScreen extends React.Component {
             />
           </View>
 
-          <View style={styles.getStartedContainer}>
-            {this._maybeRenderDevelopmentModeWarning()}
-
-            <Text style={styles.getStartedText}>
-              Get started by opening
-            </Text>
-
-            <View
-              style={[
-                styles.codeHighlightContainer,
-                styles.homeScreenFilename,
-              ]}>
-              <MonoText style={styles.codeHighlightText}>
-                screens/HomeScreen.js
-              </MonoText>
-            </View>
-
-            <Text style={styles.getStartedText}>
-              Change this text and your app will automatically reload.
+          <View style={styles.titleContainer}>
+            <Text style={styles.titleText}>
+              What do you want to do today?
             </Text>
           </View>
 
-          <View style={styles.helpContainer}>
-            <TouchableOpacity
-              onPress={this._handleHelpPress}
-              style={styles.helpLink}>
-              <Text style={styles.helpLinkText}>
-                Help, it didn’t automatically reload!
-              </Text>
-            </TouchableOpacity>
+          <View style={styles.subTitleContainer}>
+            <Text style={styles.subTitleText}>
+              EAT
+            </Text>
+            <Text style={styles.subTitleText}>
+              EXPLORE
+            </Text>
+            <Text style={styles.subTitleText}>
+              MOVE
+            </Text>
+            <Text style={styles.subTitleText}>
+              SHOP
+            </Text>
           </View>
+
         </ScrollView>
-
-        <View style={styles.tabBarInfoContainer}>
-          <Text style={styles.tabBarInfoText}>
-            This is a tab bar. You can edit it in:
-          </Text>
-
-          <View
-            style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-            <MonoText style={styles.codeHighlightText}>
-              navigation/RootNavigation.js
-            </MonoText>
-          </View>
-        </View>
       </View>
     );
   }
@@ -121,7 +98,7 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#ff2626',
   },
   developmentModeText: {
     marginBottom: 20,
@@ -144,26 +121,27 @@ const styles = StyleSheet.create({
     marginTop: 3,
     marginLeft: -10,
   },
-  getStartedContainer: {
+  titleContainer: {
     alignItems: 'center',
-    marginHorizontal: 50,
+    marginHorizontal: 15,
+    marginBottom: 18,
   },
-  homeScreenFilename: {
-    marginVertical: 7,
+  subTitleContainer: {
+    alignItems: 'center',
+    marginHorizontal: 5,
   },
-  codeHighlightText: {
-    color: 'rgba(96,100,109, 0.8)',
-  },
-  codeHighlightContainer: {
-    backgroundColor: 'rgba(0,0,0,0.05)',
-    borderRadius: 3,
-    paddingHorizontal: 4,
-  },
-  getStartedText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
+  titleText: {
+    fontSize: 26,
+    color: 'white',
     lineHeight: 23,
     textAlign: 'center',
+  },
+  subTitleText: {
+    fontSize: 20,
+    color: 'white',
+    lineHeight: 23,
+    textAlign: 'center',
+    paddingVertical: 6,
   },
   tabBarInfoContainer: {
     position: 'absolute',
@@ -182,7 +160,7 @@ const styles = StyleSheet.create({
       },
     }),
     alignItems: 'center',
-    backgroundColor: '#fbfbfb',
+    backgroundColor: '#ff2626',
     paddingVertical: 20,
   },
   tabBarInfoText: {
